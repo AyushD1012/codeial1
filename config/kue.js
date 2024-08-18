@@ -1,6 +1,9 @@
-const kue = require("kue");
-kue.app.set("kue redis url", process.env.REDIS_URL);
 
-const queue = kue.createQueue();
+const kue = require('kue');
 
-module.exports = queue;
+const queue= kue.createQueue({
+    redis: process.env.REDIS_URL
+    
+});
+
+module.exports=queue;
