@@ -9,7 +9,7 @@
 module.exports.chatSockets= function(socketServer){
     const io =require('socket.io')(socketServer,{
         cors: {
-            origin: "http://localhost:9356",
+            origin: process.env.URL || "http://localhost:9356",
             methods: ["GET", "POST"]
         }
     });
