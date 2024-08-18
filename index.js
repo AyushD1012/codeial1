@@ -4,7 +4,7 @@ const app = express();
 const port = 9356;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
-
+const dotenv = require('dotenv');
 
 const session = require('express-session');
 const passport = require('passport');

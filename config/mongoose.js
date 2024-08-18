@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/codeial_development');
+const dotenv = require('dotenv');
+// mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(`mongodb://localhost/${dotenv.db}`, { useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection;
 
